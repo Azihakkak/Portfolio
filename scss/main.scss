@@ -77,9 +77,9 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
+    "bioimage bio"
+    "job1 job2";
+  grid-template-columns: repeat(2, 1fr);
 
   .bio-image {
     grid-area: bioimage;
@@ -104,14 +104,17 @@ main {
     grid-area: job2;
   }
 
-  .job-3 {
-    grid-area: job3;
-  }
-
   .job {
     background: lighten($primary-color, 8);
-    padding: 0.5rem;
+    padding: 1rem;
     box-shadow: 5px 5px 10px gray;
+
+    h3 {
+      text-align: center;
+    }
+  }
+  li {
+    list-style: none;
   }
 }
 
@@ -130,6 +133,37 @@ main {
       opacity: 0.5;
       border-color: $secondary-color;
       @include easeOut;
+    }
+  }
+}
+
+// Contact page
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  a {
+    color: #000;
+  }
+
+  div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 1.2rem 2.2rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
     }
   }
 }
