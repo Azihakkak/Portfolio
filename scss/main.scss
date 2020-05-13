@@ -11,8 +11,7 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-family: "Poiret One", cursive;
+  font-family: $text-font !important;
   line-height: 1.5;
 }
 
@@ -22,6 +21,7 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
+  font-family: $title-font;
 
   &.lg-heading {
     font-size: 6rem;
@@ -31,7 +31,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(249, 202, 179, 0.4);
   }
 }
 
@@ -56,12 +56,13 @@ main {
 
   .icons {
     margin-top: 1rem;
+    margin-left: 1rem;
 
     a {
       padding: 0.4rem;
 
       &:hover {
-        color: $secondary-color;
+        color: black;
         @include easeOut();
       }
     }
@@ -107,9 +108,10 @@ main {
   }
 
   .job {
-    background: rgb(151, 151, 199);
+    background: $secondary-color;
     padding: 1rem;
-    box-shadow: 5px 5px 10px gray;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 0.9rem;
 
     h3 {
       text-align: center;
@@ -118,23 +120,75 @@ main {
   li {
     list-style: none;
   }
+
+  ul {
+    padding: 0;
+  }
 }
 
 // Projects
 
 .projects {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 5rem;
   grid-template-columns: repeat(3, 1fr);
 
   img {
     width: 100%;
     border: 3px #000 solid;
+    border-radius: 0.9rem;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.1;
       border-color: $secondary-color;
       @include easeOut;
+    }
+  }
+
+  .item {
+    position: relative;
+
+    &:hover .img-description {
+      visibility: visible;
+      opacity: 1;
+      z-index: -1;
+      font-size: 30px;
+      font-weight: 800;
+      margin-top: 0;
+      padding: 1rem;
+    }
+  }
+
+  .img-description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+  }
+
+  .img-text {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-left: 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+
+    li {
+      padding-left: 1rem;
     }
   }
 }
@@ -154,14 +208,14 @@ main {
 
   div {
     font-size: 2rem;
-    border: 3px #fff solid;
+    border: 3px $secondary-color solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     @include easeOut;
 
     &:hover {
       padding: 1.2rem 2.2rem;
-      background: $secondary-color;
+      background: #f9cab3fc;
       color: set-text-color($secondary-color);
       span {
         color: set-text-color($secondary-color);
@@ -181,7 +235,7 @@ main {
   align-items: center;
 
   &:hover {
-    background: $secondary-color;
+    background: #f9cab3fc;
     color: set-text-color($secondary-color);
   }
 }
