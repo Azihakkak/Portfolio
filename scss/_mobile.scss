@@ -8,6 +8,12 @@
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(2, 1fr);
+
+    .item .img-description {
+      font-size: 18px !important;
+      height: 30% !important;
+      padding-top: 20% !important;
+    }
   }
 }
 // Tablets & small laptops
@@ -70,5 +76,9 @@
   }
   .projects {
     grid-template-columns: 1fr;
+    .item .img-description {
+      font-size: 25px !important;
+      padding-top: 30% !important;
+    }
   }
 }

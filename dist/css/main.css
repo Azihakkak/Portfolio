@@ -103,18 +103,6 @@ body {
   margin: 0;
   font-family: "Baloo 2", cursive !important;
   line-height: 1.5; }
-  body#bg-img {
-    background-attachment: fixed;
-    background-size: cover; }
-    body#bg-img:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: #aca394; }
 
 h1,
 h2,
@@ -131,7 +119,7 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    padding: 0.4rem 1rem;
     background: rgba(249, 202, 179, 0.4); }
 
 a {
@@ -289,7 +277,11 @@ main {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+    .projects .item .img-description {
+      font-size: 18px !important;
+      height: 30% !important;
+      padding-top: 20% !important; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -326,4 +318,7 @@ main {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+    .projects .item .img-description {
+      font-size: 25px !important;
+      padding-top: 30% !important; } }
