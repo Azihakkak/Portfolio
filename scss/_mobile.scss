@@ -65,7 +65,7 @@
     grid-template-columns: 1fr;
   }
   .projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -78,7 +78,12 @@
     grid-template-columns: 1fr;
     .item .img-description {
       font-size: 25px !important;
-      padding-top: 30% !important;
     }
+  }
+
+  .boxes {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }

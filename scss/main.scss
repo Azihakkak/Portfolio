@@ -171,7 +171,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
     transition: 0.5s;
   }
 
@@ -199,10 +198,14 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 5rem;
 
   a {
-    color: #000;
+    color: #fff;
+
+    &:hover {
+      color: #000;
+    }
   }
 
   div {
